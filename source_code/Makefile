@@ -6,11 +6,10 @@ LDFLAGS  = -lwayland-server
 
 all: pcompositor
 
-pcompositor: $(OBJS)
-	cc -g $(OBJS) -o pcompositor $(LDFLAGS)
+pcompositor: $(OBJS) ../pcompositor
+	cc -g $(OBJS) -o ../pcompositor $(LDFLAGS)
 
 clean:
 	rm -f *.o
-	rm -f pcompositor
 
 

@@ -1,0 +1,4 @@
+*.o
+pcompositor
+pwayland_window
+
