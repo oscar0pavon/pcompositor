@@ -194,6 +194,7 @@ RegistryListener registry_listener = {
 
 int main()
 {
+  printf("pwayland window\n");
     State state = { 0 };
     state.display = wl_display_connect(NULL);
     state.registry = wl_display_get_registry(state.display);
@@ -216,6 +217,8 @@ int main()
     while (wl_display_dispatch(state.display)) {
         /* This space deliberately left blank */
     }
+
+    printf("pwayland window end\n");
 
     return 0;
 }
